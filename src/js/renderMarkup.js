@@ -1,43 +1,47 @@
-export { renderListMarkup, renderCardMarkup };
+export { renderListMarkup, renderCardMarkup, clearInput };
 import { getRefs } from './getRefs';
 const refs = getRefs();
 
-function renderItemMarkup(item) {
-    return item
-        .map(
-        ({ name, flags }) =>
-            `<li class="country-item">
+function renderItemMarkup(result) {
+  return result
+    .map(
+      ({ name, flags }) =>
+        `<li class="country-item">
             <img
             src="${flags.svg}" 
             alt="${name.official}" 
             class="country-flag"/>
             <p class="country-name">${name.official}</p>
             </li>`
-        )
+    )
     .join('');
 }
 
-function renderListMarkup(item) {
-    refs.countryList.insertAdjacentHTML('beforeend', renderItemMarkup(item));
-    }
+function renderListMarkup(result) {
+  // refs.countryList.insertAdjacentHTML('beforeend', renderItemMarkup(result));
+  refs.countryInfo.innerHTML = renderListMarkup(result);
+}
 
-function renderInfoMarkup(card) {
-    return card
-        .map(
-            ({ capital, population, languages }) => 
-            `<ul>
-            <li>Capital: ${capital}</li>
-            <li>Population: ${population}</li>
-            <li>Languages: ${Object.values(languages)}</li>
+function renderInfoMarkup(result) {
+  return result.map(
+    ({ capital, population, languages }) =>
+      `<ul>
+            <li><span clas="country_info__style> Capital: </span>${capital}</li>
+            <li><span clas="country_info__style> Population: </span>${population}</li>
+            <li><span clas="country_info__style> Languages: </span>${Object.values(
+              languages
+            )}</li>
             </ul>`
-    );
+  );
 }
 
-function renderCardMarkup(card) {
-    renderListMarkup(item);
-    refs.countryInfo.insertAdjacentHTML(
-      'beforeend',
-      renderInfoMarkup(card)
-    );
+function renderCardMarkup(result) {
+  renderListMarkup(result);
+  // refs.countryInfo.insertAdjacentHTML('beforeend', renderInfoMarkup(result));
+  refs.countryInfo.innerHTML = renderCardMarkup(result);
 }
 
+function clearInput() {
+  refs.countryInfo.innerHTML = '';
+  refs.countryList.innerHTML = '';
+}
