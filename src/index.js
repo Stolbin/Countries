@@ -1,11 +1,7 @@
 import './css/styles.css';
 import { getRefs } from './js/getRefs.js';
 import { fetchCountries } from './js/fetchCountries';
-import {
-  renderListMarkup,
-  renderCardMarkup,
-  clearForm,
-} from './js/renderMarkup';
+import { renderListMarkup, renderCardMarkup } from './js/renderMarkup';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import debounce from 'lodash.debounce';
 
@@ -18,8 +14,7 @@ function onInput(e) {
   let name = e.target.value.trim();
   if ((name = '')) {
     clearForm();
-    renderCardMarkup(resoult);
-    
+    renderCardMarkup(resoult);    
   } else {
     fetchCountries(name).then(onCheck).catch(onError);
   }
@@ -38,6 +33,6 @@ function onCheck(result) {
 }
 
 function onError(error) {
-  clearForm();
-  Notify.failure('Oops, something is wrong');
+//   clearForm();
+  Notify.failure('❌ Oops, something is wrong');
 }
