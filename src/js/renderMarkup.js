@@ -18,11 +18,11 @@ function renderItemMarkup(item) {
 }
 
 function renderListMarkup(item) {
-    refs.countryList.innerHTML = renderItemMarkup(item);
+    refs.countryList.insertAdjacentHTML('beforeend', renderItemMarkup(item));
     }
 
-function renderInfoMarkup(cardCountryData) {
-    return cardCountryData
+function renderInfoMarkup(card) {
+    return card
         .map(
             ({ capital, population, languages }) => 
             `<ul>
@@ -33,8 +33,11 @@ function renderInfoMarkup(cardCountryData) {
     );
 }
 
-function renderCardMarkup(cardCountryData) {
+function renderCardMarkup(card) {
     renderListMarkup(item);
-    refs.countryInfo.innerHTML = renderInfoMarkup(cardCountryData);
+    refs.countryInfo.insertAdjacentHTML(
+      'beforeend',
+      renderInfoMarkup(card)
+    );
 }
 

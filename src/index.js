@@ -36,3 +36,4 @@ function onError(error) {
 //   clearForm();
   Notify.failure('❌ Oops, something is wrong');
 }
+console.log(fetchCountries());
