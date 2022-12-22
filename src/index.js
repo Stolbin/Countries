@@ -15,14 +15,14 @@ const refs = getRefs();
 refs.input.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(e) {
-    let name = e.target.value.trim();
-    if (name = '') {
-        clearForm();
-        // renderCardMarkup(resoult);
-    }
-    else {
-      fetchCountries(name).then(onCheck).catch(onError);
-    }
+  let name = e.target.value.trim();
+  if ((name = '')) {
+    clearForm();
+    renderCardMarkup(resoult);
+    
+  } else {
+    fetchCountries(name).then(onCheck).catch(onError);
+  }
 }
 
 function onCheck(result) {

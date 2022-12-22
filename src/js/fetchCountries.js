@@ -10,3 +10,11 @@ export function fetchCountries(name) {
     return response.json();
   });
 }
+
+// export async function fetchCountries(name) {
+//   const response = await fetch(`${BASE_URL}/${name}?&${FILTERS}`);
+//   if (!response.ok) {
+//     Notify.failure('❌ Oops, there is no country with that name');
+//   }
+//   return await response.json();
+// }
