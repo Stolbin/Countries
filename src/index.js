@@ -15,7 +15,7 @@ refs.searchBox.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(e) {
   let name = e.target.value.trim();
-  if ((name = '')) {
+  if (name === '') {
     clearInput();
   } else {
     fetchCountries(name).then(onCheck).catch(onError);

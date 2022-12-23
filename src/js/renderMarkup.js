@@ -18,27 +18,25 @@ function renderItemMarkup(result) {
 }
 
 function renderListMarkup(result) {
-  // refs.countryList.insertAdjacentHTML('beforeend', renderItemMarkup(result));
-  refs.countryInfo.innerHTML = renderItemMarkup(result);
+  refs.countryList.insertAdjacentHTML('beforeend', renderItemMarkup(result));
 }
 
 function renderInfoMarkup(result) {
   return result.map(
     ({ capital, population, languages }) =>
-      `<ul>
-            <li><span clas="country_info__style> Capital: </span>${capital}</li>
-            <li><span clas="country_info__style> Population: </span>${population}</li>
-            <li><span clas="country_info__style> Languages: </span>${Object.values(
+      `<ul class="country_info">
+            <li class="country_info__style">Capital: <span class="country_info__style_velue">${capital}</span></li>
+            <li class="country_info__style">Population: <span class="country_info__style_velue">${population}</span></li>
+            <li class="country_info__style">Languages: <span class="country_info__style_velue">${Object.values(
               languages
-            )}</li>
+            )}</span></li>
             </ul>`
   );
 }
 
 function renderCardMarkup(result) {
   renderListMarkup(result);
-  // refs.countryInfo.insertAdjacentHTML('beforeend', renderInfoMarkup(result));
-  refs.countryInfo.innerHTML = renderInfoMarkup(result);
+  refs.countryInfo.insertAdjacentHTML('beforeend', renderInfoMarkup(result));
 }
 
 function clearInput() {

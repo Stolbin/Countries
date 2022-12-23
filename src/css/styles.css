@@ -19,3 +19,53 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+ul {
+  list-style: none;
+  padding: 8px;
+}
+.country-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.country-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.country-flag {
+  display: block;
+  width: 120px;
+}
+
+.country_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+} 
+
+.country_info__style {
+  font-size: 30px;
+  font-weight:600;
+  color: black;
+}
+
+.country_info__style_velue {
+  font-size: 26px;
+  font-weight:500;
+  color: darkslategrey;
+}
+
+.country-name {
+  font-size: 40px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.is-card {
+  font-size: 28px;
+  font-weight: 600;
+}
