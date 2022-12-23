@@ -26,7 +26,7 @@ function renderInfoMarkup(result) {
     ({ capital, population, languages }) =>
       `<ul class="country_info">
             <li class="country_info__style">Capital: <span class="country_info__style_velue">${capital}</span></li>
-            <li class="country_info__style">Population: <span class="country_info__style_velue">${population}</span></li>
+            <li class="country_info__style">Population: <span class="country_info__style_velue">${population} ppl</span></li>
             <li class="country_info__style">Languages: <span class="country_info__style_velue">${Object.values(
               languages
             )}</span></li>
