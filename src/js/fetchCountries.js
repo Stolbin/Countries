@@ -10,3 +10,13 @@ export function fetchCountries(name) {
     return response.json();
   });
 }
+
+// export async function fetchCountries(name) {
+//   const response = await fetch(`${url}/${name}?${filter}`);
+//   if (!response.ok) {
+//     throw new Error(
+//       Notify.failure('❌ Oops, there is no country with that name')
+//     );
+//   }
+//   return await response.json();
+// }
