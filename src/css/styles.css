@@ -18,9 +18,17 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: #e2d5d5;
   color: #212121;
   line-height: 1.5;
+}
+
+.text {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  font-size: large;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #search-box {
@@ -29,6 +37,13 @@ body {
   border-radius: 10px;
   max-width: 320px;
   margin-bottom: 16px;
+  margin-left: 10px;
+}
+
+input {
+  border: 1.5px solid #212121;
+  color: rgb(34, 46, 42);
+  margin-top: 10px;
 }
 
 ul {
@@ -80,8 +95,4 @@ ul {
 .is-card {
   font-size: 28px;
   font-weight: 600;
-}
-
-input {
-  border: 1.5px solid #212121;
 }
