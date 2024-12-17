@@ -1,22 +1,13 @@
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
-const url = 'https://restcountries.com/v3.1/name/';
-const filter = 'fields = name, capital, population, flags, languages';
+import { Notify } from "notiflix/build/notiflix-notify-aio";
+const url = "https://restcountries.com/v3.1/name/";
+const filter = "name,capital,population,flags,languages";
 
-export function fetchCountries(name) {
-  return fetch(`${url}/${name}?${filter}`).then(response => {
-    if (!response.ok) {
-      throw new Error(Notify.failure('❌ Oops, there is no country with that name'));
-    }
-    return response.json();
-  });
+export async function fetchCountries(name) {
+  const response = await fetch(`${url}${name}?fields=${filter}`);
+  if (!response.ok) {
+    throw new Error(
+      Notify.failure("❌ Oops, there is no country with that name")
+    );
+  }
+  return await response.json();
 }
-
-// export async function fetchCountries(name) {
-//   const response = await fetch(`${url}/${name}?${filter}`);
-//   if (!response.ok) {
-//     throw new Error(
-//       Notify.failure('❌ Oops, there is no country with that name')
-//     );
-//   }
-//   return await response.json();
-// }
