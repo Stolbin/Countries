@@ -2,11 +2,7 @@
   "name": "countries",
   "version": "2.0.0",
   "description": "",
-<<<<<<< Updated upstream
   "homepage": "https://stolbin.github.io/Countries/",
-=======
-  "homepage": "https://github.com/Stolbin/Countries",
->>>>>>> Stashed changes
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /Countries/"
@@ -16,10 +12,10 @@
     "url": "git+https://github.com/Stolbin/Countries.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Stolbin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/Countries/issues"
+    "url": "https://github.com/Stolbin/Countries/issues"
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",

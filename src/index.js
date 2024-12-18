@@ -23,11 +23,7 @@ function onInput(e) {
 }
 
 function onCheck(result) {
-<<<<<<< Updated upstream
-  if (result.length > 550) {
-=======
   if (result.length > 500) {
->>>>>>> Stashed changes
     Notify.info("Too many matches found. Please enter a more specific name.");
   } else if (result.length === 1) {
     clearInput();
