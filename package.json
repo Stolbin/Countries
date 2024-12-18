@@ -1,18 +1,18 @@
 {
-  "name": "Countries",
+  "name": "countries",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://github.com/Stolbin/goit-js-hw-10",
+  "homepage": "https://stolbin.github.io/Countries/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-10/"
+    "build": "parcel build src/*.html --public-url /Countries/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/Countries.git"
+    "url": "git+https://github.com/Stolbin/Countries.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/goitacademy/Countries/issues"
