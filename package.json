@@ -1,5 +1,5 @@
 {
-  "name": "parcel-project-template",
+  "name": "Countries",
   "version": "2.0.0",
   "description": "",
   "homepage": "https://github.com/Stolbin/goit-js-hw-10",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/goitacademy/Countries.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/goitacademy/Countries/issues"
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
